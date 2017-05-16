@@ -28,6 +28,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     public Polyline SCU_Boundary ;
+    //validating style
+    private static final String TAG = MapsActivity.class.getSimpleName();
 
     //  SCU latitude and longitude coordinates
     LatLng SCU_Location = new LatLng(30.623109, 32.2729409);
@@ -65,6 +67,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
+//        //add style to the map using json
+//        boolean success = mMap.setMapStyle(new MapStyleOptions(getResources()
+//                .getString(R.string.style_json)));
+//        if (!success) {
+//
+//            Log.e(TAG, "Style parsing failed.");
+//
+//        }
         //make Zoom (In/Out) Buttons appear
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
